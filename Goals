@@ -6,6 +6,8 @@ The goal of this project is to document the planning, development, and progress 
 
 LB is intended to become a personal AI assistant that saves time, filters information, supports decision-making, and helps automate repetitive tasks across different parts of my life.
 
+As the project grows, LB should be built with safe handling of accounts, permissions, API keys, and personal data in mind.
+
 ## Core Goals
 
 - Build a personal automation bot centered around Claude
@@ -30,6 +32,20 @@ LB should eventually help with:
 - Tracking personal projects
 - Finding useful information quickly
 - Sending alerts when something actually matters
+
+## Reliability and Security Goals
+
+LB should be built in a way that is reliable, organized, and safe to expand over time.
+
+As the project grows, I want to focus on:
+
+- Keeping API keys and tokens out of GitHub
+- Using environment variables for sensitive information
+- Limiting each integration to only the access it actually needs
+- Tracking errors clearly so problems can be reviewed later
+- Keeping logs organized and useful
+- Documenting setup steps and changes
+- Building the project in a way that can be tested and improved over time
 
 ## Decision Support Goal
 

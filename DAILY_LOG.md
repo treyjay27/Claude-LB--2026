@@ -89,5 +89,44 @@ The planned flow is:
 5. LB estimates whether the item has resale value
 6. LB sends a Telegram alert if the item looks worth buying
 
+
+## Day 004 — July 11, 2026 — Discord Issues
+
+### Summary
+
+Today I hit the first real issue with the Discord side of LB.
+Discord does not allow bots to read channels in servers I do not own, which is a huge problem because my deal 
+alerts are in channels where I am only a member.
+The first idea was to copy those channel alerts into a separate Discord server that LB could read. After looking 
+into it more, that probably is not the move. Latency would be a concern, and more importantly, it could risk 
+violating Discord rules or result in account termination.
+The better workaround may be using Discord notifications instead. If I turn on notifications for the channels I care about, 
+LB may be able to read the notification text and still extract enough useful info to send alerts.
+
+#### Notes
+
+This is annoying, but it is part of the project. LB may need to work with imperfect notification data instead of full Discord messages.
+
+## Day 005 — July 12, 2026 — Docker Desktop & n8n
+
+### Summary
+
+Today I installed and started working with Docker Desktop and n8n.
+Docker will run local services and containers on the PC. n8n will act as the automation layer that moves data between sources and Python.
+
+The plan is still:
+
+Discord / X / eBay / News
+        ↓
+       n8n
+        ↓
+ Python LB logic
+        ↓
+ Telegram alert
+Python stays as the brain of LB. n8n handles triggers, schedules, webhooks, and moving data.
+
 ### Notes
+
+This was setup-heavy, especially with Docker and localhost, but it is important plumbing for the full LB system.
+
 
